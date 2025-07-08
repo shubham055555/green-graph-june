@@ -5,7 +5,7 @@ const simpleGit = require('simple-git');
 const FILE_PATH = './data.json';
 const git = simpleGit();
 
-// ✅ Change: All 31 days of July 2024
+// ✅ 1 July se 31 July 2024 ke dates array
 const datesToCommit = [];
 for (let day = 1; day <= 31; day++) {
   datesToCommit.push(moment(`2024-07-${day}`, "YYYY-MM-DD"));
@@ -28,7 +28,7 @@ const run = async () => {
     await makeMultipleCommits(date);
   }
 
-  await git.push('origin', 'main');  // push to GitHub
+  await git.push('origin', 'main');
   console.log("🎉 All July commits pushed ✅");
 };
 
